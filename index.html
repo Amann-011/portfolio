@@ -1,721 +1,802 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-          content="Aman Kumar - Professional Personal Portfolio">
+    <meta name="description" content="Aman Kumar - Professional Personal Portfolio">
+    <meta name="author" content="Aman Kumar">
 
-    <title>Aman Kumar | Portfolio</title>
+    <title>Aman Kumar | Personal Portfolio</title>
 
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-          rel="stylesheet">
-
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
+    <!-- ================= NAVBAR ================= -->
+    <header class="header">
+        <nav class="navbar container">
 
-<header class="header">
-
-    <nav class="navbar">
-
-        <a href="#home" class="logo">
-            AK<span>.</span>
-        </a>
-
-        <button class="menu-btn" id="menuBtn">
-            ☰
-        </button>
-
-        <div class="nav-links" id="navLinks">
-
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#education">Education</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
-
-        </div>
-
-        <button class="theme-btn" id="themeBtn">
-            ☾
-        </button>
-
-    </nav>
-
-</header>
-
-
-<!-- ================= HOME ================= -->
-
-<section id="home" class="hero">
-
-    <div class="container hero-container">
-
-        <div class="hero-content">
-
-            <p class="small-title">
-                WELCOME TO MY PORTFOLIO
-            </p>
-
-            <h1>
-                Hello, I'm
-                <span>Aman Kumar</span>
-            </h1>
-
-            <h2>
-                Enthusiastic & Career-Focused Professional
-            </h2>
-
-            <p class="hero-text">
-                An enthusiastic individual looking to start a promising
-                career, contribute positively to a team and gain valuable
-                professional experience.
-            </p>
-
-            <div class="buttons">
-
-                <a href="#contact" class="btn primary-btn">
-                    Contact Me
-                </a>
-
-                <a href="#about" class="btn secondary-btn">
-                    Explore Portfolio
-                </a>
-
-            </div>
-
-            <div class="quick-info">
-
-                <span>💻 Computer Skills</span>
-                <span>🤝 Teamwork</span>
-                <span>🚀 Adaptability</span>
-
-            </div>
-
-        </div>
-
-
-        <div class="profile-card">
-
-            <div class="profile-circle">
-                AK
-            </div>
-
-            <div class="available">
-                <span></span>
-                Available for opportunities
-            </div>
-
-            <h3>
+            <a href="#home" class="logo">
+                <span>AK</span>
                 Aman Kumar
-            </h3>
+            </a>
 
-            <p>
-                Graduate • Computer Skills • Entry-Level Professional
-            </p>
-
-            <div class="stats">
-
-                <div>
-                    <strong>2025</strong>
-                    <small>Graduated</small>
-                </div>
-
-                <div>
-                    <strong>3</strong>
-                    <small>Languages</small>
-                </div>
-
-                <div>
-                    <strong>9+</strong>
-                    <small>Skills</small>
-                </div>
-
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#contact" class="nav-link">Contact</a>
             </div>
 
-        </div>
+            <div class="nav-actions">
+                <!-- Dark Mode -->
+                <button
+                    type="button"
+                    id="themeToggle"
+                    class="theme-toggle"
+                    aria-label="Toggle dark mode"
+                    title="Toggle dark mode">
+                    🌙
+                </button>
 
-    </div>
-
-</section>
-
-
-<!-- ================= ABOUT ================= -->
-
-<section id="about" class="section">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <p class="small-title">
-                ABOUT ME
-            </p>
-
-            <h2>
-                Ready to learn, contribute & grow
-            </h2>
-
-        </div>
-
-
-        <div class="about-grid">
-
-            <div class="about-text">
-
-                <p>
-                    I am Aman Kumar, an enthusiastic graduate eager to
-                    start a promising career. I am looking for an
-                    entry-level position where I can contribute positively
-                    to a team and gain valuable experience.
-                </p>
-
-                <p>
-                    I am interested in opportunities related to sales,
-                    administration, computer work and other professional
-                    roles where communication, teamwork and problem-solving
-                    skills can be useful.
-                </p>
-
+                <!-- Mobile Menu -->
+                <button
+                    type="button"
+                    id="menuToggle"
+                    class="menu-toggle"
+                    aria-label="Open menu">
+                    ☰
+                </button>
             </div>
 
+        </nav>
+    </header>
 
-            <div class="objective">
 
-                <p class="objective-title">
-                    CAREER OBJECTIVE
-                </p>
+    <main>
 
-                <p>
-                    "Looking for an entry-level position where I can
-                    contribute positively to a team and gain valuable
-                    experience."
-                </p>
+        <!-- ================= HERO ================= -->
+        <section id="home" class="hero section">
 
-            </div>
+            <div class="container hero-grid">
 
-        </div>
+                <div class="hero-content">
 
-    </div>
+                    <span class="badge">
+                        Available for Opportunities
+                    </span>
 
-</section>
-
-
-<!-- ================= SKILLS ================= -->
-
-<section id="skills" class="section gray-section">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <p class="small-title">
-                MY SKILLS
-            </p>
-
-            <h2>
-                Strengths that I bring
-            </h2>
-
-        </div>
-
-
-        <div class="cards">
-
-
-            <div class="card">
-
-                <div class="card-icon">
-                    💬
-                </div>
-
-                <h3>
-                    Communication
-                </h3>
-
-                <p>
-                    Clear and effective communication with a positive attitude.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="card-icon">
-                    🤝
-                </div>
-
-                <h3>
-                    Teamwork
-                </h3>
-
-                <p>
-                    Comfortable collaborating with others to achieve shared goals.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="card-icon">
-                    🔄
-                </div>
-
-                <h3>
-                    Adaptability
-                </h3>
-
-                <p>
-                    Willing to learn new processes, tools and responsibilities.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="card-icon">
-                    🧩
-                </div>
-
-                <h3>
-                    Problem Solving
-                </h3>
-
-                <p>
-                    Looks for practical solutions and approaches tasks calmly.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="card-icon">
-                    ⏱️
-                </div>
-
-                <h3>
-                    Time Management
-                </h3>
-
-                <p>
-                    Organized approach to completing tasks responsibly.
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="card-icon">
-                    💻
-                </div>
-
-                <h3>
-                    Computer Skills
-                </h3>
-
-                <p>
-                    Internet browsing, email communication and file management.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="skill-tags">
-
-            <span>Computer Skills</span>
-            <span>Internet Browsing</span>
-            <span>Email Communication</span>
-            <span>File Management</span>
-            <span>Organizational Skills</span>
-            <span>Initiative</span>
-            <span>Dependability</span>
-            <span>Positive Attitude</span>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= EDUCATION ================= -->
-
-<section id="education" class="section">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <p class="small-title">
-                EDUCATION
-            </p>
-
-            <h2>
-                My academic journey
-            </h2>
-
-        </div>
-
-
-        <div class="timeline">
-
-
-            <div class="timeline-item">
-
-                <div class="timeline-year">
-                    2025
-                </div>
-
-                <div class="timeline-content">
-
-                    <h3>
-                        Graduation
-                    </h3>
-
-                    <p>
-                        R.N.A.R College, Samastipur
+                    <p class="hello">
+                        Hello, I'm
                     </p>
 
-                    <strong>
-                        1st Division
-                    </strong>
+                    <h1>
+                        Aman <span>Kumar</span>
+                    </h1>
 
-                </div>
+                    <h2>
+                        Career-Focused Professional
+                    </h2>
 
-            </div>
-
-
-            <div class="timeline-item">
-
-                <div class="timeline-year">
-                    2022
-                </div>
-
-                <div class="timeline-content">
-
-                    <h3>
-                        Higher Secondary Education
-                    </h3>
-
-                    <p>
-                        I.G.R.S.L.N. College, Jitwaria,
-                        Kalyanpur, Samastipur
+                    <p class="hero-text">
+                        An enthusiastic and hardworking individual looking
+                        for an entry-level opportunity where I can contribute
+                        positively to a team, learn new skills and grow
+                        professionally.
                     </p>
 
-                    <strong>
-                        1st Division
-                    </strong>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">
+                            Contact Me
+                        </a>
+
+                        <a href="#about" class="btn btn-outline">
+                            Explore Portfolio
+                        </a>
+                    </div>
+
+                    <div class="quick-info">
+
+                        <div>
+                            <strong>2025</strong>
+                            <span>Graduation</span>
+                        </div>
+
+                        <div>
+                            <strong>ADCA</strong>
+                            <span>Computer</span>
+                        </div>
+
+                        <div>
+                            <strong>3+</strong>
+                            <span>Languages</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROFILE -->
+                <div class="hero-profile">
+
+                    <div class="profile-card">
+
+                        <div class="profile-image-wrapper">
+
+                            <!--
+                                PHOTO:
+                                Apni photo ka naam "aman.jpg" rakhein
+                                aur isi folder me upload karein.
+                            -->
+
+                            <img
+                                src="aman.jpg"
+                                alt="Aman Kumar"
+                                class="profile-photo"
+                                onerror="this.style.display='none'; document.getElementById('photoPlaceholder').style.display='flex';">
+
+                            <div
+                                id="photoPlaceholder"
+                                class="photo-placeholder">
+                                <span>AK</span>
+                            </div>
+
+                        </div>
+
+                        <div class="profile-info">
+                            <h3>Aman Kumar</h3>
+                            <p>Professional & Career Focused</p>
+                        </div>
+
+                        <div class="profile-status">
+                            <span class="status-dot"></span>
+                            Open to Work
+                        </div>
+
+                    </div>
 
                 </div>
 
             </div>
 
+        </section>
 
-            <div class="timeline-item">
 
-                <div class="timeline-year">
-                    2020
-                </div>
+        <!-- ================= ABOUT ================= -->
+        <section id="about" class="section">
 
-                <div class="timeline-content">
+            <div class="container">
 
-                    <h3>
-                        Secondary Education
-                    </h3>
-
+                <div class="section-heading">
+                    <span>ABOUT ME</span>
+                    <h2>Know More About Me</h2>
                     <p>
-                        City Central High School, Jitwaria,
-                        Kalyanpur, Samastipur
+                        A motivated individual ready to learn, contribute
+                        and grow.
                     </p>
+                </div>
 
-                    <strong>
-                        2nd Division
-                    </strong>
+                <div class="about-grid">
+
+                    <div class="about-text">
+
+                        <p>
+                            I am <strong>Aman Kumar</strong>, an enthusiastic
+                            individual looking to start a promising career
+                            in a professional environment.
+                        </p>
+
+                        <p>
+                            I am interested in opportunities where I can use
+                            my communication, teamwork, computer and
+                            organizational skills while gaining valuable
+                            practical experience.
+                        </p>
+
+                        <p>
+                            I believe in maintaining a positive attitude,
+                            learning continuously and completing my
+                            responsibilities with dedication.
+                        </p>
+
+                    </div>
+
+                    <div class="about-cards">
+
+                        <div class="info-card">
+                            <div class="info-icon">💻</div>
+                            <div>
+                                <h3>Computer Skills</h3>
+                                <p>
+                                    Computer operations, internet browsing,
+                                    email and file management.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">🤝</div>
+                            <div>
+                                <h3>Teamwork</h3>
+                                <p>
+                                    Comfortable working with people and
+                                    contributing to team goals.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">🚀</div>
+                            <div>
+                                <h3>Growth Mindset</h3>
+                                <p>
+                                    Always ready to learn new skills and
+                                    improve professionally.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
 
                 </div>
 
             </div>
 
-        </div>
+        </section>
 
 
-        <div class="additional">
+        <!-- ================= SKILLS ================= -->
+        <section id="skills" class="section section-alt">
 
-            <h3>
-                Additional Education
-            </h3>
+            <div class="container">
 
-            <div class="skill-tags">
-
-                <span>ITI</span>
-                <span>Computer (ADCA)</span>
-                <span>Solar Technician</span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= SERVICES ================= -->
-
-<section id="services" class="section gray-section">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <p class="small-title">
-                WHAT I CAN OFFER
-            </p>
-
-            <h2>
-                Professional strengths
-            </h2>
-
-        </div>
-
-
-        <div class="cards services">
-
-
-            <div class="card">
-
-                <div class="card-icon">
-                    📊
+                <div class="section-heading">
+                    <span>MY SKILLS</span>
+                    <h2>Skills & Strengths</h2>
+                    <p>
+                        Skills that help me work effectively in a professional environment.
+                    </p>
                 </div>
 
-                <h3>
-                    Sales Support
-                </h3>
 
-                <p>
-                    People-focused support using communication,
-                    organization and teamwork.
-                </p>
+                <div class="skills-grid">
 
-            </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">💻</div>
+                        <h3>Computer Skills</h3>
+                        <p>
+                            Basic computer operations and digital tasks.
+                        </p>
+                    </div>
 
+                    <div class="skill-card">
+                        <div class="skill-icon">🌐</div>
+                        <h3>Internet Browsing</h3>
+                        <p>
+                            Comfortable using the internet for information
+                            and everyday tasks.
+                        </p>
+                    </div>
 
-            <div class="card">
+                    <div class="skill-card">
+                        <div class="skill-icon">📧</div>
+                        <h3>Email Communication</h3>
+                        <p>
+                            Professional email communication and handling.
+                        </p>
+                    </div>
 
-                <div class="card-icon">
-                    📁
+                    <div class="skill-card">
+                        <div class="skill-icon">📁</div>
+                        <h3>File Management</h3>
+                        <p>
+                            Organizing and managing digital files and documents.
+                        </p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">💬</div>
+                        <h3>Communication</h3>
+                        <p>
+                            Good communication and interpersonal skills.
+                        </p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">🤝</div>
+                        <h3>Teamwork</h3>
+                        <p>
+                            Cooperative and positive team player.
+                        </p>
+                    </div>
+
                 </div>
 
-                <h3>
-                    Administration
-                </h3>
 
-                <p>
-                    Organized handling of files, email communication
-                    and routine computer tasks.
-                </p>
+                <div class="skill-tags">
 
-            </div>
+                    <span>Adaptability</span>
+                    <span>Problem Solving</span>
+                    <span>Time Management</span>
+                    <span>Organization</span>
+                    <span>Initiative</span>
+                    <span>Dependability</span>
+                    <span>Positive Attitude</span>
 
-
-            <div class="card">
-
-                <div class="card-icon">
-                    🖥️
                 </div>
 
-                <h3>
-                    Computer Work
-                </h3>
+            </div>
 
-                <p>
-                    Comfortable with internet browsing, file management
-                    and everyday computer work.
-                </p>
+        </section>
+
+
+        <!-- ================= EDUCATION ================= -->
+        <section id="education" class="section">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <span>EDUCATION</span>
+                    <h2>My Education</h2>
+                    <p>
+                        My academic and technical education journey.
+                    </p>
+                </div>
+
+
+                <div class="timeline">
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-dot"></div>
+
+                        <div class="education-card">
+
+                            <span class="education-year">
+                                2025
+                            </span>
+
+                            <h3>Graduation</h3>
+
+                            <h4>
+                                R.N.A.R College, Samastipur
+                            </h4>
+
+                            <p>
+                                First Division
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-dot"></div>
+
+                        <div class="education-card">
+
+                            <span class="education-year">
+                                2022
+                            </span>
+
+                            <h3>Higher Secondary Education</h3>
+
+                            <h4>
+                                I.G.R.S.L.N. College Jitwaria,
+                                Kalyanpur, Samastipur
+                            </h4>
+
+                            <p>
+                                First Division
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-dot"></div>
+
+                        <div class="education-card">
+
+                            <span class="education-year">
+                                2020
+                            </span>
+
+                            <h3>Secondary Education</h3>
+
+                            <h4>
+                                City Central High School Jitwaria,
+                                Kalyanpur, Samastipur
+                            </h4>
+
+                            <p>
+                                Second Division
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-dot"></div>
+
+                        <div class="education-card">
+
+                            <span class="education-year">
+                                Technical Education
+                            </span>
+
+                            <h3>Additional Education</h3>
+
+                            <h4>
+                                ITI • Computer (ADCA) • Solar Technician
+                            </h4>
+
+                            <p>
+                                Technical and computer-related training.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
 
             </div>
 
-        </div>
-
-    </div>
-
-</section>
+        </section>
 
 
-<!-- ================= LANGUAGES & HOBBIES ================= -->
+        <!-- ================= SERVICES ================= -->
+        <section id="services" class="section section-alt">
 
-<section class="section dark-section">
+            <div class="container">
 
-    <div class="container">
+                <div class="section-heading">
+                    <span>WHAT I CAN DO</span>
+                    <h2>Services & Work Areas</h2>
+                    <p>
+                        Areas where I can contribute as an entry-level professional.
+                    </p>
+                </div>
 
-        <div class="two-column">
 
+                <div class="services-grid">
+
+                    <div class="service-card">
+                        <div class="service-icon">📊</div>
+                        <h3>Sales Support</h3>
+                        <p>
+                            Customer interaction, communication and
+                            basic sales support activities.
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🗂️</div>
+                        <h3>Administration</h3>
+                        <p>
+                            Basic office, organizational and administrative
+                            support work.
+                        </p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">💻</div>
+                        <h3>Computer Work</h3>
+                        <p>
+                            Computer operations, internet, email and
+                            file management tasks.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= LANGUAGES & HOBBIES ================= -->
+        <section class="section">
+
+            <div class="container">
+
+                <div class="two-column">
+
+                    <div>
+
+                        <div class="section-heading left">
+                            <span>LANGUAGES</span>
+                            <h2>Languages I Know</h2>
+                        </div>
+
+                        <div class="language-list">
+
+                            <div class="language">
+                                <div>
+                                    <strong>Hindi</strong>
+                                    <span>Fluent</span>
+                                </div>
+                                <div class="language-bar">
+                                    <span style="width: 95%;"></span>
+                                </div>
+                            </div>
+
+                            <div class="language">
+                                <div>
+                                    <strong>English</strong>
+                                    <span>Good</span>
+                                </div>
+                                <div class="language-bar">
+                                    <span style="width: 75%;"></span>
+                                </div>
+                            </div>
+
+                            <div class="language">
+                                <div>
+                                    <strong>Maithili</strong>
+                                    <span>Fluent</span>
+                                </div>
+                                <div class="language-bar">
+                                    <span style="width: 90%;"></span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div>
+
+                        <div class="section-heading left">
+                            <span>HOBBIES</span>
+                            <h2>Things I Enjoy</h2>
+                        </div>
+
+                        <div class="hobbies">
+
+                            <div class="hobby">
+                                <span>📚</span>
+                                <strong>Reading Books</strong>
+                            </div>
+
+                            <div class="hobby">
+                                <span>⚽</span>
+                                <strong>Sports & Fitness</strong>
+                            </div>
+
+                            <div class="hobby">
+                                <span>🍳</span>
+                                <strong>Cooking</strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CONTACT ================= -->
+        <section id="contact" class="section contact-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <span>GET IN TOUCH</span>
+                    <h2>Let's Connect</h2>
+                    <p>
+                        Feel free to contact me for professional opportunities.
+                    </p>
+                </div>
+
+
+                <div class="contact-grid">
+
+                    <div class="contact-info">
+
+                        <a
+                            href="tel:+917061205197"
+                            class="contact-card">
+
+                            <div class="contact-icon">📱</div>
+
+                            <div>
+                                <span>Phone</span>
+                                <strong>+91 70612 05197</strong>
+                            </div>
+
+                        </a>
+
+
+                        <a
+                            href="mailto:amankr70612@gmail.com"
+                            class="contact-card">
+
+                            <div class="contact-icon">✉️</div>
+
+                            <div>
+                                <span>Email</span>
+                                <strong>amankr70612@gmail.com</strong>
+                            </div>
+
+                        </a>
+
+
+                        <div class="contact-card">
+
+                            <div class="contact-icon">📍</div>
+
+                            <div>
+                                <span>Location</span>
+                                <strong>Samastipur, Bihar, India</strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <form
+                        id="contactForm"
+                        class="contact-form">
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+                                <label for="name">
+                                    Your Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    placeholder="Enter your name"
+                                    required>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="email">
+                                    Your Email
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="Enter your email"
+                                    required>
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="subject">
+                                Subject
+                            </label>
+
+                            <input
+                                type="text"
+                                id="subject"
+                                name="subject"
+                                placeholder="Enter subject"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="message">
+                                Message
+                            </label>
+
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="6"
+                                placeholder="Write your message..."
+                                required></textarea>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary submit-btn">
+
+                            Send Message →
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+
+        <div class="container footer-content">
 
             <div>
+                <a href="#home" class="logo footer-logo">
+                    <span>AK</span>
+                    Aman Kumar
+                </a>
 
-                <p class="small-title">
-                    LANGUAGES
+                <p>
+                    Career-focused professional ready to learn,
+                    contribute and grow.
                 </p>
-
-                <h2>
-                    Communication
-                </h2>
-
-                <div class="tags">
-
-                    <span>Hindi</span>
-                    <span>English</span>
-                    <span>Maithili</span>
-
-                </div>
-
             </div>
 
 
-            <div>
+            <div class="footer-links">
 
-                <p class="small-title">
-                    HOBBIES
-                </p>
-
-                <h2>
-                    Beyond Work
-                </h2>
-
-                <div class="tags">
-
-                    <span>📚 Reading Books</span>
-                    <span>🏃 Sports & Fitness</span>
-                    <span>🍳 Cooking</span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= CONTACT ================= -->
-
-<section id="contact" class="section contact-section">
-
-    <div class="container contact-grid">
-
-
-        <div>
-
-            <p class="small-title">
-                GET IN TOUCH
-            </p>
-
-            <h2>
-                Let's connect
-            </h2>
-
-            <p class="contact-text">
-                I am open to suitable entry-level opportunities
-                and professional conversations.
-            </p>
-
-
-            <div class="contact-details">
-
-                <a href="tel:+917061205197">
-                    📞 +91 70612 05197
-                </a>
-
-                <a href="mailto:amankr70612@gmail.com">
-                    ✉️ amankr70612@gmail.com
-                </a>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#education">Education</a>
+                <a href="#contact">Contact</a>
 
             </div>
 
         </div>
 
 
-        <form id="contactForm" class="contact-form">
+        <div class="copyright">
 
-            <input
-                type="text"
-                id="name"
-                placeholder="Your Name"
-                required
-            >
+            © <span id="currentYear"></span>
+            Aman Kumar. All Rights Reserved.
 
-            <input
-                type="email"
-                id="email"
-                placeholder="Your Email"
-                required
-            >
+        </div>
 
-            <textarea
-                id="message"
-                rows="6"
-                placeholder="Your Message"
-                required
-            ></textarea>
-
-            <button
-                type="submit"
-                class="btn primary-btn"
-            >
-                Send Message
-            </button>
-
-            <p id="formMessage"></p>
-
-        </form>
-
-    </div>
-
-</section>
+    </footer>
 
 
-<!-- ================= FOOTER ================= -->
+    <!-- Back To Top -->
+    <button
+        id="backToTop"
+        class="back-to-top"
+        aria-label="Back to top">
 
-<footer>
+        ↑
 
-    <div class="container footer">
-
-        <p>
-            © <span id="year"></span> Aman Kumar.
-            All Rights Reserved.
-        </p>
-
-        <a href="#home">
-            Back to top ↑
-        </a>
-
-    </div>
-
-</footer>
+    </button>
 
 
-<!-- JavaScript -->
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 </html>
+```
