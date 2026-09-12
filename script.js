@@ -1,126 +1,308 @@
 ```javascript
-/* =========================
-   MOBILE MENU
-========================= */
+/* =====================================================
+   AMAN KUMAR PORTFOLIO
+   JAVASCRIPT
+===================================================== */
 
-const menuBtn = document.getElementById("menuBtn");
-const navLinks = document.getElementById("navLinks");
+document.addEventListener("DOMContentLoaded", function () {
 
-menuBtn.addEventListener("click", function () {
+    /* ================= ELEMENTS ================= */
 
-    navLinks.classList.toggle("open");
+    const body = document.body;
 
-});
+    const themeToggle =
+        document.getElementById("themeToggle");
+
+    const menuToggle =
+        document.getElementById("menuToggle");
+
+    const navMenu =
+        document.getElementById("navMenu");
+
+    const navLinks =
+        document.querySelectorAll(".nav-link");
+
+    const contactForm =
+        document.getElementById("contactForm");
+
+    const backToTop =
+        document.getElementById("backToTop");
+
+    const currentYear =
+        document.getElementById("currentYear");
 
 
-/* Close menu after clicking a link */
+    /* ================= YEAR ================= */
 
-const links = document.querySelectorAll(".nav-links a");
-
-links.forEach(function (link) {
-
-    link.addEventListener("click", function () {
-
-        navLinks.classList.remove("open");
-
-    });
-
-});
+    if (currentYear) {
+        currentYear.textContent =
+            new Date().getFullYear();
+    }
 
 
-/* =========================
-   DARK / LIGHT MODE
-========================= */
+    /* =================================================
+       DARK / LIGHT MODE
+    ================================================= */
 
-const themeBtn = document.getElementById("themeBtn");
+    const savedTheme =
+        localStorage.getItem("amanTheme");
 
-themeBtn.addEventListener("click", function () {
+    if (savedTheme === "dark") {
 
-    document.body.classList.toggle("dark");
+        body.classList.add("dark");
 
-    if (document.body.classList.contains("dark")) {
-
-        themeBtn.textContent = "☀";
+        themeToggle.textContent = "☀️";
 
     } else {
 
-        themeBtn.textContent = "☾";
+        body.classList.remove("dark");
 
-    }
-
-});
-
-
-/* =========================
-   CURRENT YEAR
-========================= */
-
-const year = document.getElementById("year");
-
-year.textContent = new Date().getFullYear();
-
-
-/* =========================
-   CONTACT FORM
-========================= */
-
-const contactForm = document.getElementById("contactForm");
-
-contactForm.addEventListener("submit", function (event) {
-
-    event.preventDefault();
-
-    const name =
-        document.getElementById("name").value.trim();
-
-    const email =
-        document.getElementById("email").value.trim();
-
-    const message =
-        document.getElementById("message").value.trim();
-
-    const formMessage =
-        document.getElementById("formMessage");
-
-
-    if (!name || !email || !message) {
-
-        formMessage.textContent =
-            "Please fill in all fields.";
-
-        return;
-
+        themeToggle.textContent = "🌙";
     }
 
 
-    /*
-       Opens the user's email application.
-       No backend/server is required.
-    */
+    themeToggle.addEventListener("click", function () {
 
-    const subject =
-        encodeURIComponent(
-            "Portfolio Enquiry from " + name
+        body.classList.toggle("dark");
+
+        const isDark =
+            body.classList.contains("dark");
+
+        if (isDark) {
+
+            localStorage.setItem(
+                "amanTheme",
+                "dark"
+            );
+
+            themeToggle.textContent = "☀️";
+
+            themeToggle.setAttribute(
+                "aria-label",
+                "Switch to light mode"
+            );
+
+        } else {
+
+            localStorage.setItem(
+                "amanTheme",
+                "light"
+            );
+
+            themeToggle.textContent = "🌙";
+
+            themeToggle.setAttribute(
+                "aria-label",
+                "Switch to dark mode"
+            );
+        }
+
+    });
+
+
+    /* =================================================
+       MOBILE MENU
+    ================================================= */
+
+    menuToggle.addEventListener("click", function () {
+
+        navMenu.classList.toggle("show");
+
+        const isOpen =
+            navMenu.classList.contains("show");
+
+        menuToggle.textContent =
+            isOpen ? "✕" : "☰";
+
+        menuToggle.setAttribute(
+            "aria-label",
+            isOpen ? "Close menu" : "Open menu"
         );
 
-    const body =
-        encodeURIComponent(
-            message +
-            "\n\nReply to: " +
-            email
-        );
+    });
 
 
-    window.location.href =
-        "mailto:amankr70612@gmail.com" +
-        "?subject=" +
-        subject +
-        "&body=" +
-        body;
+    /* Close mobile menu after clicking link */
+
+    navLinks.forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            navMenu.classList.remove("show");
+
+            menuToggle.textContent = "☰";
+
+        });
+
+    });
 
 
-    formMessage.textContent =
-        "Opening your email application...";
+    /* =================================================
+       ACTIVE NAVIGATION
+    ================================================= */
+
+    const sections =
+        document.querySelectorAll("section[id]");
+
+    function updateActiveLink() {
+
+        const scrollPosition =
+            window.scrollY + 150;
+
+        sections.forEach(function (section) {
+
+            const sectionTop =
+                section.offsetTop;
+
+            const sectionHeight =
+                section.offsetHeight;
+
+            const sectionId =
+                section.getAttribute("id");
+
+            if (
+                scrollPosition >= sectionTop &&
+                scrollPosition <
+                    sectionTop + sectionHeight
+            ) {
+
+                navLinks.forEach(function (link) {
+
+                    link.classList.remove("active");
+
+                    if (
+                        link.getAttribute("href") ===
+                        "#" + sectionId
+                    ) {
+                        link.classList.add("active");
+                    }
+
+                });
+
+            }
+
+        });
+
+    }
+
+    window.addEventListener(
+        "scroll",
+        updateActiveLink
+    );
+
+    updateActiveLink();
+
+
+    /* =================================================
+       BACK TO TOP
+    ================================================= */
+
+    window.addEventListener("scroll", function () {
+
+        if (window.scrollY > 500) {
+
+            backToTop.classList.add("show");
+
+        } else {
+
+            backToTop.classList.remove("show");
+
+        }
+
+    });
+
+
+    backToTop.addEventListener(
+        "click",
+        function () {
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+    );
+
+
+    /* =================================================
+       CONTACT FORM
+    ================================================= */
+
+    contactForm.addEventListener(
+        "submit",
+        function (event) {
+
+            event.preventDefault();
+
+            const name =
+                document.getElementById("name").value.trim();
+
+            const email =
+                document.getElementById("email").value.trim();
+
+            const subject =
+                document.getElementById("subject").value.trim();
+
+            const message =
+                document.getElementById("message").value.trim();
+
+
+            if (
+                !name ||
+                !email ||
+                !subject ||
+                !message
+            ) {
+
+                alert(
+                    "Please fill all the fields."
+                );
+
+                return;
+
+            }
+
+
+            const emailBody =
+                "Name: " + name +
+                "\nEmail: " + email +
+                "\n\nMessage:\n" + message;
+
+
+            const mailtoLink =
+                "mailto:amankr70612@gmail.com" +
+                "?subject=" +
+                encodeURIComponent(subject) +
+                "&body=" +
+                encodeURIComponent(emailBody);
+
+
+            window.location.href =
+                mailtoLink;
+
+        }
+    );
+
+
+    /* =================================================
+       ESC KEY CLOSES MOBILE MENU
+    ================================================= */
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (event.key === "Escape") {
+
+                navMenu.classList.remove("show");
+
+                menuToggle.textContent = "☰";
+
+            }
+
+        }
+    );
 
 });
 ```
