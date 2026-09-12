@@ -1,89 +1,73 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Aman Kumar - Professional Personal Portfolio">
-    <meta name="author" content="Aman Kumar">
-
-    <title>Aman Kumar | Personal Portfolio</title>
+    <meta name="description" content="Aman Kumar Personal Portfolio">
+    <title>Aman Kumar | Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- ================= NAVBAR ================= -->
+    <!-- Header -->
     <header class="header">
-        <nav class="navbar container">
+        <div class="container navbar">
 
             <a href="#home" class="logo">
                 <span>AK</span>
                 Aman Kumar
             </a>
 
-            <div class="nav-menu" id="navMenu">
-                <a href="#home" class="nav-link active">Home</a>
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link">Home</a>
                 <a href="#about" class="nav-link">About</a>
                 <a href="#skills" class="nav-link">Skills</a>
                 <a href="#education" class="nav-link">Education</a>
                 <a href="#services" class="nav-link">Services</a>
                 <a href="#contact" class="nav-link">Contact</a>
-            </div>
+            </nav>
 
             <div class="nav-actions">
-                <!-- Dark Mode -->
                 <button
                     type="button"
                     id="themeToggle"
-                    class="theme-toggle"
-                    aria-label="Toggle dark mode"
-                    title="Toggle dark mode">
+                    class="icon-button"
+                    aria-label="Switch to dark mode">
                     🌙
                 </button>
 
-                <!-- Mobile Menu -->
                 <button
                     type="button"
                     id="menuToggle"
-                    class="menu-toggle"
+                    class="icon-button menu-button"
                     aria-label="Open menu">
                     ☰
                 </button>
             </div>
 
-        </nav>
+        </div>
     </header>
 
 
+    <!-- Main -->
     <main>
 
-        <!-- ================= HERO ================= -->
-        <section id="home" class="hero section">
-
+        <!-- Hero -->
+        <section class="hero section" id="home">
             <div class="container hero-grid">
 
                 <div class="hero-content">
+                    <p class="small-label">WELCOME TO MY PORTFOLIO</p>
 
-                    <span class="badge">
-                        Available for Opportunities
-                    </span>
+                    <p class="hello-text">Hello, I'm</p>
 
-                    <p class="hello">
-                        Hello, I'm
-                    </p>
+                    <h1>Aman <span>Kumar</span></h1>
 
-                    <h1>
-                        Aman <span>Kumar</span>
-                    </h1>
+                    <h2>Career-Focused Professional</h2>
 
-                    <h2>
-                        Career-Focused Professional
-                    </h2>
-
-                    <p class="hero-text">
+                    <p class="hero-description">
                         An enthusiastic and hardworking individual looking
                         for an entry-level opportunity where I can contribute
                         positively to a team, learn new skills and grow
@@ -91,17 +75,16 @@
                     </p>
 
                     <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-primary">
+                        <a href="#contact" class="button primary-button">
                             Contact Me
                         </a>
 
-                        <a href="#about" class="btn btn-outline">
+                        <a href="#about" class="button secondary-button">
                             Explore Portfolio
                         </a>
                     </div>
 
                     <div class="quick-info">
-
                         <div>
                             <strong>2025</strong>
                             <span>Graduation</span>
@@ -116,76 +99,58 @@
                             <strong>3+</strong>
                             <span>Languages</span>
                         </div>
-
                     </div>
-
                 </div>
 
 
-                <!-- PROFILE -->
-                <div class="hero-profile">
-
+                <!-- Right Side Passport Size Photo -->
+                <div class="hero-photo-area">
                     <div class="profile-card">
 
-                        <div class="profile-image-wrapper">
-
-                            <!--
-                                PHOTO:
-                                Apni photo ka naam "aman.jpg" rakhein
-                                aur isi folder me upload karein.
-                            -->
-
+                        <div class="passport-photo-wrapper">
                             <img
                                 src="aman.jpg"
                                 alt="Aman Kumar"
-                                class="profile-photo"
-                                onerror="this.style.display='none'; document.getElementById('photoPlaceholder').style.display='flex';">
+                                class="passport-photo"
+                                id="profilePhoto">
 
                             <div
-                                id="photoPlaceholder"
-                                class="photo-placeholder">
-                                <span>AK</span>
+                                class="photo-placeholder"
+                                id="photoPlaceholder">
+                                AK
                             </div>
-
                         </div>
 
-                        <div class="profile-info">
-                            <h3>Aman Kumar</h3>
-                            <p>Professional & Career Focused</p>
-                        </div>
+                        <h3>Aman Kumar</h3>
+                        <p>Open to Work</p>
 
-                        <div class="profile-status">
-                            <span class="status-dot"></span>
-                            Open to Work
+                        <div class="availability">
+                            <span></span>
+                            Available for Opportunities
                         </div>
 
                     </div>
-
                 </div>
 
             </div>
-
         </section>
 
 
-        <!-- ================= ABOUT ================= -->
-        <section id="about" class="section">
-
+        <!-- About -->
+        <section class="section" id="about">
             <div class="container">
 
                 <div class="section-heading">
-                    <span>ABOUT ME</span>
+                    <p class="small-label">ABOUT ME</p>
                     <h2>Know More About Me</h2>
                     <p>
-                        A motivated individual ready to learn, contribute
-                        and grow.
+                        A motivated individual ready to learn, contribute and grow.
                     </p>
                 </div>
 
                 <div class="about-grid">
 
                     <div class="about-text">
-
                         <p>
                             I am <strong>Aman Kumar</strong>, an enthusiastic
                             individual looking to start a promising career
@@ -195,8 +160,8 @@
                         <p>
                             I am interested in opportunities where I can use
                             my communication, teamwork, computer and
-                            organizational skills while gaining valuable
-                            practical experience.
+                            organizational skills while gaining practical
+                            experience.
                         </p>
 
                         <p>
@@ -204,10 +169,9 @@
                             learning continuously and completing my
                             responsibilities with dedication.
                         </p>
-
                     </div>
 
-                    <div class="about-cards">
+                    <div class="info-list">
 
                         <div class="info-card">
                             <div class="info-icon">💻</div>
@@ -243,84 +207,64 @@
                         </div>
 
                     </div>
-
                 </div>
-
             </div>
-
         </section>
 
 
-        <!-- ================= SKILLS ================= -->
-        <section id="skills" class="section section-alt">
-
+        <!-- Skills -->
+        <section class="section section-alt" id="skills">
             <div class="container">
 
                 <div class="section-heading">
-                    <span>MY SKILLS</span>
+                    <p class="small-label">MY SKILLS</p>
                     <h2>Skills & Strengths</h2>
                     <p>
                         Skills that help me work effectively in a professional environment.
                     </p>
                 </div>
 
+                <div class="cards-grid">
 
-                <div class="skills-grid">
-
-                    <div class="skill-card">
-                        <div class="skill-icon">💻</div>
+                    <div class="content-card">
+                        <div class="card-icon">💻</div>
                         <h3>Computer Skills</h3>
-                        <p>
-                            Basic computer operations and digital tasks.
-                        </p>
+                        <p>Basic computer operations and digital tasks.</p>
                     </div>
 
-                    <div class="skill-card">
-                        <div class="skill-icon">🌐</div>
+                    <div class="content-card">
+                        <div class="card-icon">🌐</div>
                         <h3>Internet Browsing</h3>
-                        <p>
-                            Comfortable using the internet for information
-                            and everyday tasks.
-                        </p>
+                        <p>Comfortable using the internet for daily tasks.</p>
                     </div>
 
-                    <div class="skill-card">
-                        <div class="skill-icon">📧</div>
+                    <div class="content-card">
+                        <div class="card-icon">📧</div>
                         <h3>Email Communication</h3>
-                        <p>
-                            Professional email communication and handling.
-                        </p>
+                        <p>Professional email communication and handling.</p>
                     </div>
 
-                    <div class="skill-card">
-                        <div class="skill-icon">📁</div>
+                    <div class="content-card">
+                        <div class="card-icon">📁</div>
                         <h3>File Management</h3>
-                        <p>
-                            Organizing and managing digital files and documents.
-                        </p>
+                        <p>Organizing and managing digital files and documents.</p>
                     </div>
 
-                    <div class="skill-card">
-                        <div class="skill-icon">💬</div>
+                    <div class="content-card">
+                        <div class="card-icon">💬</div>
                         <h3>Communication</h3>
-                        <p>
-                            Good communication and interpersonal skills.
-                        </p>
+                        <p>Good communication and interpersonal skills.</p>
                     </div>
 
-                    <div class="skill-card">
-                        <div class="skill-icon">🤝</div>
+                    <div class="content-card">
+                        <div class="card-icon">🤝</div>
                         <h3>Teamwork</h3>
-                        <p>
-                            Cooperative and positive team player.
-                        </p>
+                        <p>Cooperative and positive team player.</p>
                     </div>
 
                 </div>
 
-
                 <div class="skill-tags">
-
                     <span>Adaptability</span>
                     <span>Problem Solving</span>
                     <span>Time Management</span>
@@ -328,165 +272,104 @@
                     <span>Initiative</span>
                     <span>Dependability</span>
                     <span>Positive Attitude</span>
-
                 </div>
 
             </div>
-
         </section>
 
 
-        <!-- ================= EDUCATION ================= -->
-        <section id="education" class="section">
-
+        <!-- Education -->
+        <section class="section" id="education">
             <div class="container">
 
                 <div class="section-heading">
-                    <span>EDUCATION</span>
+                    <p class="small-label">EDUCATION</p>
                     <h2>My Education</h2>
-                    <p>
-                        My academic and technical education journey.
-                    </p>
+                    <p>My academic and technical education journey.</p>
                 </div>
-
 
                 <div class="timeline">
 
                     <div class="timeline-item">
-
                         <div class="timeline-dot"></div>
 
                         <div class="education-card">
-
-                            <span class="education-year">
-                                2025
-                            </span>
-
+                            <span class="year">2025</span>
                             <h3>Graduation</h3>
-
-                            <h4>
-                                R.N.A.R College, Samastipur
-                            </h4>
-
-                            <p>
-                                First Division
-                            </p>
-
+                            <h4>R.N.A.R College, Samastipur</h4>
+                            <p>First Division</p>
                         </div>
-
                     </div>
 
-
                     <div class="timeline-item">
-
                         <div class="timeline-dot"></div>
 
                         <div class="education-card">
-
-                            <span class="education-year">
-                                2022
-                            </span>
-
+                            <span class="year">2022</span>
                             <h3>Higher Secondary Education</h3>
-
                             <h4>
                                 I.G.R.S.L.N. College Jitwaria,
                                 Kalyanpur, Samastipur
                             </h4>
-
-                            <p>
-                                First Division
-                            </p>
-
+                            <p>First Division</p>
                         </div>
-
                     </div>
 
-
                     <div class="timeline-item">
-
                         <div class="timeline-dot"></div>
 
                         <div class="education-card">
-
-                            <span class="education-year">
-                                2020
-                            </span>
-
+                            <span class="year">2020</span>
                             <h3>Secondary Education</h3>
-
                             <h4>
                                 City Central High School Jitwaria,
                                 Kalyanpur, Samastipur
                             </h4>
-
-                            <p>
-                                Second Division
-                            </p>
-
+                            <p>Second Division</p>
                         </div>
-
                     </div>
 
-
                     <div class="timeline-item">
-
                         <div class="timeline-dot"></div>
 
                         <div class="education-card">
-
-                            <span class="education-year">
-                                Technical Education
-                            </span>
-
+                            <span class="year">Technical Education</span>
                             <h3>Additional Education</h3>
-
-                            <h4>
-                                ITI • Computer (ADCA) • Solar Technician
-                            </h4>
-
-                            <p>
-                                Technical and computer-related training.
-                            </p>
-
+                            <h4>ITI • Computer ADCA • Solar Technician</h4>
+                            <p>Technical and computer-related training.</p>
                         </div>
-
                     </div>
 
                 </div>
-
             </div>
-
         </section>
 
 
-        <!-- ================= SERVICES ================= -->
-        <section id="services" class="section section-alt">
-
+        <!-- Services -->
+        <section class="section section-alt" id="services">
             <div class="container">
 
                 <div class="section-heading">
-                    <span>WHAT I CAN DO</span>
+                    <p class="small-label">WHAT I CAN DO</p>
                     <h2>Services & Work Areas</h2>
                     <p>
                         Areas where I can contribute as an entry-level professional.
                     </p>
                 </div>
 
+                <div class="cards-grid">
 
-                <div class="services-grid">
-
-                    <div class="service-card">
-                        <div class="service-icon">📊</div>
+                    <div class="content-card center-card">
+                        <div class="card-icon">📊</div>
                         <h3>Sales Support</h3>
                         <p>
-                            Customer interaction, communication and
-                            basic sales support activities.
+                            Customer interaction, communication and basic
+                            sales support activities.
                         </p>
                     </div>
 
-                    <div class="service-card">
-                        <div class="service-icon">🗂️</div>
+                    <div class="content-card center-card">
+                        <div class="card-icon">🗂️</div>
                         <h3>Administration</h3>
                         <p>
                             Basic office, organizational and administrative
@@ -494,258 +377,178 @@
                         </p>
                     </div>
 
-                    <div class="service-card">
-                        <div class="service-icon">💻</div>
+                    <div class="content-card center-card">
+                        <div class="card-icon">💻</div>
                         <h3>Computer Work</h3>
                         <p>
-                            Computer operations, internet, email and
-                            file management tasks.
+                            Computer operations, internet, email and file
+                            management tasks.
                         </p>
                     </div>
 
                 </div>
-
             </div>
-
         </section>
 
 
-        <!-- ================= LANGUAGES & HOBBIES ================= -->
+        <!-- Languages and Hobbies -->
         <section class="section">
+            <div class="container two-column">
 
-            <div class="container">
+                <div>
+                    <div class="section-heading left-heading">
+                        <p class="small-label">LANGUAGES</p>
+                        <h2>Languages I Know</h2>
+                    </div>
 
-                <div class="two-column">
+                    <div class="language-list">
 
-                    <div>
-
-                        <div class="section-heading left">
-                            <span>LANGUAGES</span>
-                            <h2>Languages I Know</h2>
+                        <div class="language-item">
+                            <div>
+                                <strong>Hindi</strong>
+                                <span>Fluent</span>
+                            </div>
+                            <div class="language-bar">
+                                <span style="width: 95%;"></span>
+                            </div>
                         </div>
 
-                        <div class="language-list">
-
-                            <div class="language">
-                                <div>
-                                    <strong>Hindi</strong>
-                                    <span>Fluent</span>
-                                </div>
-                                <div class="language-bar">
-                                    <span style="width: 95%;"></span>
-                                </div>
+                        <div class="language-item">
+                            <div>
+                                <strong>English</strong>
+                                <span>Good</span>
                             </div>
-
-                            <div class="language">
-                                <div>
-                                    <strong>English</strong>
-                                    <span>Good</span>
-                                </div>
-                                <div class="language-bar">
-                                    <span style="width: 75%;"></span>
-                                </div>
+                            <div class="language-bar">
+                                <span style="width: 75%;"></span>
                             </div>
+                        </div>
 
-                            <div class="language">
-                                <div>
-                                    <strong>Maithili</strong>
-                                    <span>Fluent</span>
-                                </div>
-                                <div class="language-bar">
-                                    <span style="width: 90%;"></span>
-                                </div>
+                        <div class="language-item">
+                            <div>
+                                <strong>Maithili</strong>
+                                <span>Fluent</span>
                             </div>
-
+                            <div class="language-bar">
+                                <span style="width: 90%;"></span>
+                            </div>
                         </div>
 
                     </div>
+                </div>
 
 
-                    <div>
-
-                        <div class="section-heading left">
-                            <span>HOBBIES</span>
-                            <h2>Things I Enjoy</h2>
-                        </div>
-
-                        <div class="hobbies">
-
-                            <div class="hobby">
-                                <span>📚</span>
-                                <strong>Reading Books</strong>
-                            </div>
-
-                            <div class="hobby">
-                                <span>⚽</span>
-                                <strong>Sports & Fitness</strong>
-                            </div>
-
-                            <div class="hobby">
-                                <span>🍳</span>
-                                <strong>Cooking</strong>
-                            </div>
-
-                        </div>
-
+                <div>
+                    <div class="section-heading left-heading">
+                        <p class="small-label">HOBBIES</p>
+                        <h2>Things I Enjoy</h2>
                     </div>
 
+                    <div class="hobbies">
+                        <div class="hobby">📚 Reading Books</div>
+                        <div class="hobby">⚽ Sports & Fitness</div>
+                        <div class="hobby">🍳 Cooking</div>
+                    </div>
                 </div>
 
             </div>
-
         </section>
 
 
-        <!-- ================= CONTACT ================= -->
-        <section id="contact" class="section contact-section">
-
+        <!-- Contact -->
+        <section class="section section-alt" id="contact">
             <div class="container">
 
                 <div class="section-heading">
-                    <span>GET IN TOUCH</span>
+                    <p class="small-label">GET IN TOUCH</p>
                     <h2>Let's Connect</h2>
-                    <p>
-                        Feel free to contact me for professional opportunities.
-                    </p>
+                    <p>Feel free to contact me for professional opportunities.</p>
                 </div>
-
 
                 <div class="contact-grid">
 
-                    <div class="contact-info">
+                    <div class="contact-details">
 
-                        <a
-                            href="tel:+917061205197"
-                            class="contact-card">
-
-                            <div class="contact-icon">📱</div>
-
-                            <div>
-                                <span>Phone</span>
+                        <a href="tel:+917061205197" class="contact-card">
+                            <span class="contact-symbol">📱</span>
+                            <span>
+                                <small>Phone</small>
                                 <strong>+91 70612 05197</strong>
-                            </div>
-
+                            </span>
                         </a>
 
-
-                        <a
-                            href="mailto:amankr70612@gmail.com"
-                            class="contact-card">
-
-                            <div class="contact-icon">✉️</div>
-
-                            <div>
-                                <span>Email</span>
+                        <a href="mailto:amankr70612@gmail.com" class="contact-card">
+                            <span class="contact-symbol">✉️</span>
+                            <span>
+                                <small>Email</small>
                                 <strong>amankr70612@gmail.com</strong>
-                            </div>
-
+                            </span>
                         </a>
-
 
                         <div class="contact-card">
-
-                            <div class="contact-icon">📍</div>
-
-                            <div>
-                                <span>Location</span>
+                            <span class="contact-symbol">📍</span>
+                            <span>
+                                <small>Location</small>
                                 <strong>Samastipur, Bihar, India</strong>
-                            </div>
-
+                            </span>
                         </div>
 
                     </div>
 
 
-                    <form
-                        id="contactForm"
-                        class="contact-form">
+                    <form id="contactForm" class="contact-form">
 
                         <div class="form-row">
-
                             <div class="form-group">
-                                <label for="name">
-                                    Your Name
-                                </label>
-
+                                <label for="name">Your Name</label>
                                 <input
                                     type="text"
                                     id="name"
-                                    name="name"
                                     placeholder="Enter your name"
                                     required>
                             </div>
 
-
                             <div class="form-group">
-                                <label for="email">
-                                    Your Email
-                                </label>
-
+                                <label for="email">Your Email</label>
                                 <input
                                     type="email"
                                     id="email"
-                                    name="email"
                                     placeholder="Enter your email"
                                     required>
                             </div>
-
                         </div>
 
-
                         <div class="form-group">
-
-                            <label for="subject">
-                                Subject
-                            </label>
-
+                            <label for="subject">Subject</label>
                             <input
                                 type="text"
                                 id="subject"
-                                name="subject"
                                 placeholder="Enter subject"
                                 required>
-
                         </div>
-
 
                         <div class="form-group">
-
-                            <label for="message">
-                                Message
-                            </label>
-
+                            <label for="message">Message</label>
                             <textarea
                                 id="message"
-                                name="message"
-                                rows="6"
+                                rows="5"
                                 placeholder="Write your message..."
                                 required></textarea>
-
                         </div>
 
-
-                        <button
-                            type="submit"
-                            class="btn btn-primary submit-btn">
-
-                            Send Message →
-
+                        <button type="submit" class="button primary-button full-button">
+                            Send Message
                         </button>
 
                     </form>
-
                 </div>
-
             </div>
-
         </section>
 
     </main>
 
 
-    <!-- ================= FOOTER ================= -->
+    <!-- Footer -->
     <footer class="footer">
-
         <div class="container footer-content">
 
             <div>
@@ -760,43 +563,30 @@
                 </p>
             </div>
 
-
             <div class="footer-links">
-
                 <a href="#home">Home</a>
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
-                <a href="#education">Education</a>
                 <a href="#contact">Contact</a>
-
             </div>
 
         </div>
 
-
         <div class="copyright">
-
-            © <span id="currentYear"></span>
-            Aman Kumar. All Rights Reserved.
-
+            © <span id="currentYear"></span> Aman Kumar. All Rights Reserved.
         </div>
-
     </footer>
 
 
-    <!-- Back To Top -->
     <button
+        type="button"
         id="backToTop"
         class="back-to-top"
         aria-label="Back to top">
-
         ↑
-
     </button>
 
 
     <script src="script.js"></script>
-
 </body>
 </html>
-```
