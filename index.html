@@ -1,529 +1,438 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Aman Kumar | Portfolio</title>
+  <title>Aman Kumar | Personal Portfolio</title>
 
-    <link rel="stylesheet" href="style.css">
+  <meta
+    name="description"
+    content="Personal portfolio website of Aman Kumar, showcasing education, skills, qualifications and contact details.">
+
+  <link rel="stylesheet" href="style.css">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="#home" class="logo">Aman<span>.</span></a>
 
-    <header class="header">
-        <div class="container navbar">
+      <nav class="navbar" id="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-            <a href="#home" class="logo">
-                <span>AK</span>
-                Aman Kumar
+      <button
+        class="theme-toggle"
+        id="themeToggle"
+        type="button"
+        aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+      </button>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open navigation menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="small-heading">WELCOME TO MY PORTFOLIO</p>
+
+          <h1>
+            Hi, I'm <span>Aman Kumar</span>
+          </h1>
+
+          <h2>Enthusiastic Learner & Dedicated Professional</h2>
+
+          <p>
+            I am an enthusiastic and hardworking individual looking for an
+            entry-level opportunity where I can contribute positively to a
+            team, improve my skills and gain valuable professional experience.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#contact" class="btn primary-btn">
+              Contact Me <i class="fas fa-arrow-right"></i>
             </a>
 
-            <nav class="nav-menu" id="navMenu">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#education">Education</a>
-                <a href="#services">Services</a>
-                <a href="#contact">Contact</a>
-            </nav>
+            <a href="#about" class="btn outline-btn">
+              Know More
+            </a>
+          </div>
 
-            <div class="nav-actions">
+          <div class="quick-social-links">
+            <a
+              href="https://www.facebook.com/share/1EBudUT8B7/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook Profile">
+              <i class="fab fa-facebook-f"></i>
+            </a>
 
-                <!-- Dark Mode: CSS based -->
-                <input
-                    type="checkbox"
-                    id="darkMode"
-                    class="dark-checkbox">
-
-                <label
-                    for="darkMode"
-                    class="theme-button"
-                    title="Toggle dark mode"
-                    aria-label="Toggle dark mode">
-                    <span class="sun">☀️</span>
-                    <span class="moon">🌙</span>
-                </label>
-
-                <button
-                    type="button"
-                    id="menuToggle"
-                    class="menu-button"
-                    aria-label="Open menu">
-                    ☰
-                </button>
-
-            </div>
+            <a
+              href="https://www.linkedin.com/in/aman-kumar-5770813a2?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn Profile">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
         </div>
-    </header>
 
-
-    <main>
-
-        <section class="hero section" id="home">
-            <div class="container hero-grid">
-
-                <div class="hero-content">
-                    <p class="small-label">WELCOME TO MY PORTFOLIO</p>
-
-                    <p class="hello">Hello, I'm</p>
-
-                    <h1>Aman <span>Kumar</span></h1>
-
-                    <h2>Career-Focused Professional</h2>
-
-                    <p class="hero-text">
-                        An enthusiastic and hardworking individual looking
-                        for an entry-level opportunity where I can contribute
-                        positively to a team, learn new skills and grow
-                        professionally.
-                    </p>
-
-                    <div class="hero-buttons">
-                        <a href="#contact" class="button primary-button">
-                            Contact Me
-                        </a>
-
-                        <a href="#about" class="button secondary-button">
-                            Explore Portfolio
-                        </a>
-                    </div>
-
-                    <div class="quick-info">
-                        <div>
-                            <strong>2025</strong>
-                            <span>Graduation</span>
-                        </div>
-
-                        <div>
-                            <strong>ADCA</strong>
-                            <span>Computer</span>
-                        </div>
-
-                        <div>
-                            <strong>3+</strong>
-                            <span>Languages</span>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="hero-photo-area">
-                    <div class="profile-card">
-
-                        <div class="passport-photo-wrapper">
-                            <img
-                                src="aman.jpg"
-                                alt="Aman Kumar"
-                                class="passport-photo"
-                                id="profilePhoto">
-
-                            <div
-                                class="photo-placeholder"
-                                id="photoPlaceholder">
-                                AK
-                            </div>
-                        </div>
-
-                        <h3>Aman Kumar</h3>
-                        <p>Open to Work</p>
-
-                        <div class="availability">
-                            <span></span>
-                            Available for Opportunities
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-
-        <section class="section" id="about">
-            <div class="container">
-
-                <div class="section-heading">
-                    <p class="small-label">ABOUT ME</p>
-                    <h2>Know More About Me</h2>
-                    <p>A motivated individual ready to learn, contribute and grow.</p>
-                </div>
-
-                <div class="about-grid">
-
-                    <div class="about-text">
-                        <p>
-                            I am <strong>Aman Kumar</strong>, an enthusiastic
-                            individual looking to start a promising career
-                            in a professional environment.
-                        </p>
-
-                        <p>
-                            I am interested in opportunities where I can use
-                            my communication, teamwork, computer and
-                            organizational skills while gaining practical
-                            experience.
-                        </p>
-
-                        <p>
-                            I believe in maintaining a positive attitude,
-                            learning continuously and completing my
-                            responsibilities with dedication.
-                        </p>
-                    </div>
-
-                    <div class="info-list">
-
-                        <div class="info-card">
-                            <div class="info-icon">💻</div>
-                            <div>
-                                <h3>Computer Skills</h3>
-                                <p>Computer operations, internet, email and file management.</p>
-                            </div>
-                        </div>
-
-                        <div class="info-card">
-                            <div class="info-icon">🤝</div>
-                            <div>
-                                <h3>Teamwork</h3>
-                                <p>Comfortable working with people and contributing to team goals.</p>
-                            </div>
-                        </div>
-
-                        <div class="info-card">
-                            <div class="info-icon">🚀</div>
-                            <div>
-                                <h3>Growth Mindset</h3>
-                                <p>Always ready to learn new skills and improve professionally.</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <section class="section section-alt" id="skills">
-            <div class="container">
-
-                <div class="section-heading">
-                    <p class="small-label">MY SKILLS</p>
-                    <h2>Skills & Strengths</h2>
-                    <p>Skills that help me work effectively in a professional environment.</p>
-                </div>
-
-                <div class="cards-grid">
-
-                    <div class="content-card">
-                        <div class="card-icon">💻</div>
-                        <h3>Computer Skills</h3>
-                        <p>Basic computer operations and digital tasks.</p>
-                    </div>
-
-                    <div class="content-card">
-                        <div class="card-icon">🌐</div>
-                        <h3>Internet Browsing</h3>
-                        <p>Comfortable using the internet for daily tasks.</p>
-                    </div>
-
-                    <div class="content-card">
-                        <div class="card-icon">📧</div>
-                        <h3>Email Communication</h3>
-                        <p>Professional email communication and handling.</p>
-                    </div>
-
-                    <div class="content-card">
-                        <div class="card-icon">📁</div>
-                        <h3>File Management</h3>
-                        <p>Organizing and managing digital files and documents.</p>
-                    </div>
-
-                    <div class="content-card">
-                        <div class="card-icon">💬</div>
-                        <h3>Communication</h3>
-                        <p>Good communication and interpersonal skills.</p>
-                    </div>
-
-                    <div class="content-card">
-                        <div class="card-icon">🤝</div>
-                        <h3>Teamwork</h3>
-                        <p>Cooperative and positive team player.</p>
-                    </div>
-
-                </div>
-
-                <div class="skill-tags">
-                    <span>Adaptability</span>
-                    <span>Problem Solving</span>
-                    <span>Time Management</span>
-                    <span>Organization</span>
-                    <span>Initiative</span>
-                    <span>Dependability</span>
-                    <span>Positive Attitude</span>
-                </div>
-
-            </div>
-        </section>
-
-
-        <section class="section" id="education">
-            <div class="container">
-
-                <div class="section-heading">
-                    <p class="small-label">EDUCATION</p>
-                    <h2>My Education</h2>
-                    <p>My academic and technical education journey.</p>
-                </div>
-
-                <div class="timeline">
-
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="education-card">
-                            <span class="year">2025</span>
-                            <h3>Graduation</h3>
-                            <h4>R.N.A.R College, Samastipur</h4>
-                            <p>First Division</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="education-card">
-                            <span class="year">2022</span>
-                            <h3>Higher Secondary Education</h3>
-                            <h4>I.G.R.S.L.N. College Jitwaria, Kalyanpur, Samastipur</h4>
-                            <p>First Division</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="education-card">
-                            <span class="year">2020</span>
-                            <h3>Secondary Education</h3>
-                            <h4>City Central High School Jitwaria, Kalyanpur, Samastipur</h4>
-                            <p>Second Division</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="education-card">
-                            <span class="year">Technical Education</span>
-                            <h3>Additional Education</h3>
-                            <h4>ITI • Computer ADCA • Solar Technician</h4>
-                            <p>Technical and computer-related training.</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-
-        <section class="section section-alt" id="services">
-            <div class="container">
-
-                <div class="section-heading">
-                    <p class="small-label">WHAT I CAN DO</p>
-                    <h2>Services & Work Areas</h2>
-                    <p>Areas where I can contribute as an entry-level professional.</p>
-                </div>
-
-                <div class="cards-grid">
-
-                    <div class="content-card center-card">
-                        <div class="card-icon">📊</div>
-                        <h3>Sales Support</h3>
-                        <p>Customer interaction, communication and basic sales support activities.</p>
-                    </div>
-
-                    <div class="content-card center-card">
-                        <div class="card-icon">🗂️</div>
-                        <h3>Administration</h3>
-                        <p>Basic office, organizational and administrative support work.</p>
-                    </div>
-
-                    <div class="content-card center-card">
-                        <div class="card-icon">💻</div>
-                        <h3>Computer Work</h3>
-                        <p>Computer operations, internet, email and file management tasks.</p>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-
-        <section class="section">
-            <div class="container two-column">
-
-                <div>
-                    <div class="section-heading left-heading">
-                        <p class="small-label">LANGUAGES</p>
-                        <h2>Languages I Know</h2>
-                    </div>
-
-                    <div class="language-list">
-                        <div class="language-item">
-                            <div>
-                                <strong>Hindi</strong>
-                                <span>Fluent</span>
-                            </div>
-                            <div class="language-bar">
-                                <span style="width: 95%;"></span>
-                            </div>
-                        </div>
-
-                        <div class="language-item">
-                            <div>
-                                <strong>English</strong>
-                                <span>Good</span>
-                            </div>
-                            <div class="language-bar">
-                                <span style="width: 75%;"></span>
-                            </div>
-                        </div>
-
-                        <div class="language-item">
-                            <div>
-                                <strong>Maithili</strong>
-                                <span>Fluent</span>
-                            </div>
-                            <div class="language-bar">
-                                <span style="width: 90%;"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="section-heading left-heading">
-                        <p class="small-label">HOBBIES</p>
-                        <h2>Things I Enjoy</h2>
-                    </div>
-
-                    <div class="hobbies">
-                        <div class="hobby">📚 Reading Books</div>
-                        <div class="hobby">⚽ Sports & Fitness</div>
-                        <div class="hobby">🍳 Cooking</div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-
-        <section class="section section-alt" id="contact">
-            <div class="container">
-
-                <div class="section-heading">
-                    <p class="small-label">GET IN TOUCH</p>
-                    <h2>Let's Connect</h2>
-                    <p>Feel free to contact me for professional opportunities.</p>
-                </div>
-
-                <div class="contact-grid">
-
-                    <div class="contact-details">
-
-                        <a href="tel:+917061205197" class="contact-card">
-                            <span class="contact-symbol">📱</span>
-                            <span>
-                                <small>Phone</small>
-                                <strong>+91 70612 05197</strong>
-                            </span>
-                        </a>
-
-                        <a href="mailto:amankr70612@gmail.com" class="contact-card">
-                            <span class="contact-symbol">✉️</span>
-                            <span>
-                                <small>Email</small>
-                                <strong>amankr70612@gmail.com</strong>
-                            </span>
-                        </a>
-
-                        <div class="contact-card">
-                            <span class="contact-symbol">📍</span>
-                            <span>
-                                <small>Location</small>
-                                <strong>Samastipur, Bihar, India</strong>
-                            </span>
-                        </div>
-
-                    </div>
-
-                    <form id="contactForm" class="contact-form">
-
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Your Name</label>
-                                <input type="text" id="name" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="email">Your Email</label>
-                                <input type="email" id="email" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" rows="5" required></textarea>
-                        </div>
-
-                        <button type="submit" class="button primary-button full-button">
-                            Send Message
-                        </button>
-
-                    </form>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-
-    <footer class="footer">
-        <div class="container footer-content">
-            <div>
-                <a href="#home" class="logo footer-logo">
-                    <span>AK</span>
-                    Aman Kumar
+        <div class="hero-photo-area">
+          <div class="photo-decoration"></div>
+
+          <img
+            src="aman.jpg"
+            alt="Aman Kumar"
+            class="profile-photo">
+
+          <div class="photo-caption">
+            <i class="fas fa-check-circle"></i>
+            Available for opportunities
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-heading">
+          <p>GET TO KNOW ME</p>
+          <h2>About Me</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card">
+            <h3>Career Objective</h3>
+
+            <p>
+              I am an enthusiastic individual eager to start a promising
+              career. I am looking for an entry-level position where I can
+              contribute positively to a team and gain valuable experience.
+              I am interested in learning new things, accepting challenges
+              and developing my professional abilities.
+            </p>
+          </div>
+
+          <div class="about-card">
+            <h3>Personal Information</h3>
+
+            <div class="personal-info">
+              <p>
+                <strong>Name:</strong>
+                Aman Kumar
+              </p>
+
+              <p>
+                <strong>Phone:</strong>
+                <a href="tel:+917061205197">+91 70612 05197</a>
+              </p>
+
+              <p>
+                <strong>Email:</strong>
+                <a href="mailto:amankr70612@gmail.com">
+                  amankr70612@gmail.com
                 </a>
+              </p>
 
-                <p>Career-focused professional ready to learn, contribute and grow.</p>
+              <p>
+                <strong>Languages:</strong>
+                Hindi, English, Maithili
+              </p>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <div class="footer-links">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#contact">Contact</a>
-            </div>
+    <!-- Skills Section -->
+    <section class="section alternate-section" id="skills">
+      <div class="container">
+        <div class="section-heading">
+          <p>WHAT I CAN DO</p>
+          <h2>My Skills</h2>
         </div>
 
-        <div class="copyright">
-            © <span id="currentYear"></span> Aman Kumar. All Rights Reserved.
+        <div class="cards-grid">
+          <div class="skill-card">
+            <i class="fas fa-comments"></i>
+            <h3>Communication Skills</h3>
+            <p>Good communication and interpersonal abilities.</p>
+          </div>
+
+          <div class="skill-card">
+            <i class="fas fa-users"></i>
+            <h3>Teamwork</h3>
+            <p>Ability to work positively and effectively in a team.</p>
+          </div>
+
+          <div class="skill-card">
+            <i class="fas fa-laptop"></i>
+            <h3>Computer Skills</h3>
+            <p>Basic computer operation and digital work knowledge.</p>
+          </div>
+
+          <div class="skill-card">
+            <i class="fas fa-globe"></i>
+            <h3>Internet Browsing</h3>
+            <p>Comfortable with internet browsing and online research.</p>
+          </div>
+
+          <div class="skill-card">
+            <i class="fas fa-envelope"></i>
+            <h3>Email Communication</h3>
+            <p>Basic professional email communication skills.</p>
+          </div>
+
+          <div class="skill-card">
+            <i class="fas fa-folder-open"></i>
+            <h3>File Management</h3>
+            <p>Knowledge of organizing and managing computer files.</p>
+          </div>
+
+          <div class="skill-card">
+            <i class="fas fa-lightbulb"></i>
+            <h3>Problem Solving</h3>
+            <p>Positive attitude towards solving problems and challenges.</p>
+          </div>
+
+          <div class="skill-card">
+            <i class="fas fa-clock"></i>
+            <h3>Time Management</h3>
+            <p>Ability to manage tasks and complete work on time.</p>
+          </div>
+
+          <div class="skill-card">
+            <i class="fas fa-arrows-rotate"></i>
+            <h3>Adaptability</h3>
+            <p>Ready to learn new skills and adapt to new situations.</p>
+          </div>
         </div>
-    </footer>
+      </div>
+    </section>
 
+    <!-- Education Section -->
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section-heading">
+          <p>MY QUALIFICATIONS</p>
+          <h2>Education</h2>
+        </div>
 
-    <button
-        type="button"
-        id="backToTop"
-        class="back-to-top"
-        aria-label="Back to top">
-        ↑
-    </button>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
 
+            <div class="timeline-content">
+              <span class="timeline-year">2025</span>
+              <h3>Graduation</h3>
+              <p class="education-place">
+                R.N.A.R College, Samastipur
+              </p>
+              <p>
+                Result: <strong>1st Division</strong>
+              </p>
+            </div>
+          </div>
 
-    <script src="script.js"></script>
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <i class="fas fa-school"></i>
+            </div>
+
+            <div class="timeline-content">
+              <span class="timeline-year">2022</span>
+              <h3>Higher Secondary Education</h3>
+              <p class="education-place">
+                I.G.R.S.L.N. College Jitwaria, Kalyanpur, Samastipur
+              </p>
+              <p>
+                Result: <strong>1st Division</strong>
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <i class="fas fa-book"></i>
+            </div>
+
+            <div class="timeline-content">
+              <span class="timeline-year">2020</span>
+              <h3>Secondary Education</h3>
+              <p class="education-place">
+                City Central High School Jitwaria, Kalyanpur, Samastipur
+              </p>
+              <p>
+                Result: <strong>2nd Division</strong>
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <i class="fas fa-certificate"></i>
+            </div>
+
+            <div class="timeline-content">
+              <span class="timeline-year">Additional Qualifications</span>
+              <h3>Other Education</h3>
+              <ul>
+                <li>ITI</li>
+                <li>Computer — ADCA</li>
+                <li>Solar Technician</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Languages and Hobbies -->
+    <section class="section alternate-section">
+      <div class="container">
+        <div class="section-heading">
+          <p>MORE ABOUT ME</p>
+          <h2>Languages & Hobbies</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card">
+            <div class="card-heading">
+              <i class="fas fa-language"></i>
+              <h3>Languages</h3>
+            </div>
+
+            <div class="tag-list">
+              <span>Hindi</span>
+              <span>English</span>
+              <span>Maithili</span>
+            </div>
+          </div>
+
+          <div class="about-card">
+            <div class="card-heading">
+              <i class="fas fa-heart"></i>
+              <h3>Hobbies</h3>
+            </div>
+
+            <div class="tag-list">
+              <span>Reading Books</span>
+              <span>Sports and Fitness</span>
+              <span>Cooking</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-heading">
+          <p>LET'S CONNECT</p>
+          <h2>Contact Me</h2>
+        </div>
+
+        <div class="contact-card">
+          <p>
+            If you are looking for a hardworking and enthusiastic individual,
+            feel free to connect with me.
+          </p>
+
+          <div class="contact-details">
+            <a href="tel:+917061205197" class="contact-item">
+              <i class="fas fa-phone"></i>
+              <span>+91 70612 05197</span>
+            </a>
+
+            <a href="mailto:amankr70612@gmail.com" class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>amankr70612@gmail.com</span>
+            </a>
+          </div>
+
+          <div class="social-profile-buttons">
+            <a
+              href="https://www.facebook.com/share/1EBudUT8B7/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="facebook-button">
+              <i class="fab fa-facebook-f"></i>
+              Facebook Profile
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/aman-kumar-5770813a2?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="linkedin-button">
+              <i class="fab fa-linkedin-in"></i>
+              LinkedIn Profile
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <h3>Aman<span>.</span></h3>
+      <p>Personal Portfolio Website</p>
+
+      <div class="footer-social-links">
+        <a
+          href="https://www.facebook.com/share/1EBudUT8B7/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Facebook Profile">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/aman-kumar-5770813a2?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn Profile">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
+
+      <p class="copyright">
+        © <span id="year"></span> Aman Kumar. All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" type="button" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
 </body>
 </html>
